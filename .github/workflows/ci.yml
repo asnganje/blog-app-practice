@@ -80,7 +80,8 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-
+      - name: Fix permissions for Rails
+        run: chmod +x bin/rails
       - name: Run tests
         env:
           RAILS_ENV: test
