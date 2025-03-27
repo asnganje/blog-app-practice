@@ -1,0 +1,10 @@
+<p>Home Page</p>
+<% if @articles.length > 0 %>
+  <% @articles.each do |article| %>
+    <strong><%= link_to article.title, article %></strong>
+    <p><%= article.content %></p>
+  <%end%>
+<%end%>
+<p>
+  <%= link_to "Create new", articles_new_path %>
+</p>
