@@ -1,5 +1,6 @@
 <p>Show Article Page</p>
-<p>
+<div>
   <strong><%= @article.title%></strong>
   <p><%= @article.content%></p>
-</p>
+  <%= link_to "Back to Articles", root_path %>
+</div>
