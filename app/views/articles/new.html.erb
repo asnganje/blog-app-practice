@@ -1,8 +1,2 @@
 <p>New Article</p>
-<%= form_with model: @article do |form|%>
-  <%=form.label :title%><br/>
-  <%=form.text_field :title%><br/>
-  <%=form.label :content%><br/>
-  <%=form.text_area :content%><br/><br/>
-  <%=form.submit%>
-<% end %>
+<%= render 'form', article: @article%>

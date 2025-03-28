@@ -1,6 +1,7 @@
 <p>Show Article Page</p>
 <div>
-  <strong><%= @article.title%></strong>
-  <p><%= @article.content%></p>
+  <%= render 'article', article: @article%>
+  <%= link_to "Edit Article", edit_article_path(@article) %><br/><br/>
+  <%= button_to "Delete", article_path(@article), method: :delete %><br/><br/>
   <%= link_to "Back to Articles", root_path %>
 </div>
