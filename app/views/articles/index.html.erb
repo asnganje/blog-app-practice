@@ -1,10 +1,10 @@
 <p>Home Page</p>
 <% if @articles.length > 0 %>
   <% @articles.each do |article| %>
-    <strong><%= link_to article.title, article %></strong>
-    <p><%= article.content %></p>
+    <%= render 'article', article: article %>
+    <%= link_to "Show", article_path(article) %><br/><br/>
   <%end%>
 <%end%>
 <p>
-  <%= link_to "Create new", articles_new_path %>
+  <%= link_to "Create new", new_article_path %>
 </p>
