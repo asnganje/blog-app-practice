@@ -3,5 +3,9 @@
   <%= render 'article', article: @article%>
   <%= link_to "Edit Article", edit_article_path(@article) %><br/><br/>
   <%= button_to "Delete", article_path(@article), method: :delete %><br/><br/>
+  <h2>New Comment</h2><br/>
+  <%= render 'comments/form' %>
+  <h2>Comments</h2>
+  <%= render "comments/comments" %>
   <%= link_to "Back to Articles", root_path %>
 </div>
